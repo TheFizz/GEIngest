@@ -1,0 +1,11 @@
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\GEditIngest.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\GEditIngest.deps.json
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\GEditIngest.runtimeconfig.json
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\GEditIngest.pdb
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\Amazon.Lambda.Core.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\Amazon.Lambda.S3Events.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\AWSSDK.Core.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\AWSSDK.DynamoDBv2.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\AWSSDK.S3.dll
+D:\Workspace\Projects\GE\AWS\GEditIngest\GEditIngest\bin\Release\net6.0\publish\Newtonsoft.Json.dll

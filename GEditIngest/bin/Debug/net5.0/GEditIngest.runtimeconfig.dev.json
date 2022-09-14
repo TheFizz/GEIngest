@@ -1,0 +1,10 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\nolik\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\nolik\\.nuget\\packages",
+      "D:\\Workspace\\VisualStudio\\Shared\\NuGetPackages",
+      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+    ]
+  }
+}

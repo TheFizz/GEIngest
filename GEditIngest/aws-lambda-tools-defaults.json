@@ -1,0 +1,26 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "TheFizzGlobaledit",
+    "region"      : "us-east-1",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "function-runtime" : "dotnet6",
+    "function-memory-size" : 256,
+    "function-timeout"     : 900,
+    "function-handler"     : "GEditIngest::GEditIngest.Function::FunctionHandler",
+    "function-name"        : "Stetson-Ingest",
+    "function-description" : "It might take a newly uploaded s3 file and maybe even upload it to GE. 17% of the time it works every time.",
+    "package-type"         : "Zip",
+    "function-role"        : "arn:aws:iam::275146998172:role/Lambda-Access",
+    "function-architecture" : "x86_64",
+    "tracing-mode"          : "PassThrough",
+    "environment-variables" : "",
+    "image-tag"             : "",
+    "kms-key"               : "arn:aws:kms:us-east-1:275146998172:key/1888457b-0fa4-46ae-af62-a1cafcbc5908"
+}

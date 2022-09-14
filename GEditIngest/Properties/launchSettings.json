@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Mock Lambda Test Tool": {
+      "commandName": "Executable",
+      "commandLineArgs": "--port 5050",
+      "workingDirectory": ".\\bin\\$(Configuration)\\net6.0",
+      "executablePath": "%USERPROFILE%\\.dotnet\\tools\\dotnet-lambda-test-tool-6.0.exe",
+      "environmentVariables": {
+        "API_KEY": "i03DiQWSR1aerApoVct7v7bYusPqA7vT5zqbw0Cn",
+        "API_USER": "278264",
+        "GE_ENV": "dev.globaledit.com",
+        "ACCOUNT": "276068",
+        "BUCKET": "stetson-ingest"
+      }
+    }
+  }
+}
