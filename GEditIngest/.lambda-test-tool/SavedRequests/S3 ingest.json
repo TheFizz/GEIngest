@@ -23,7 +23,7 @@
                     "Arn": "arn:aws:s3:::stetson-ingest"
                 },
                 "Object": {
-                    "Key": "B0014226.jpg",
+                    "Key": "SHOT_01_0849.jpg",
                     "Size": 2550769,
                     "ETag": "6a9a4448c3f0065b23b6b49e7f661d78",
                     "VersionId": null,

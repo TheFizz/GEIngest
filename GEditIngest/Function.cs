@@ -89,18 +89,40 @@ namespace GEditIngest
             httpClient.Timeout = TimeSpan.FromMinutes(5);
             try
             {
-                var strippedFileName = Path.GetFileNameWithoutExtension(s3Event.Object.Key);
-                var response = await SearchAsset(strippedFileName);
+                var strippedFileQuery = Path.GetFileNameWithoutExtension(s3Event.Object.Key);
+                var response = await SearchAsset(strippedFileQuery);
                 var responseJson = await response.ReadAsStringAsync();
                 var jobj = JObject.Parse(responseJson);
                 var assetCount = int.Parse(jobj["count"].ToString());
+                JToken targetAsset = null;
                 if (assetCount < 1)
                 {
-                    context.Logger.LogLine($"Search returned 0 assets. Searched for: {strippedFileName}");
+                    context.Logger.LogLine($"Search returned 0 assets. Searched for: {strippedFileQuery}");
                     return null;
                 }
-                var assets = jobj["assets"].ToList();
-                var transferResponse = await TransferAttachment(s3Event.Bucket.Name, s3Event.Object.Key, assets[0]);
+                else
+                {
+                    var assets = jobj["assets"].ToList();
+                    if (assetCount > 1)
+                    {
+                        foreach (JToken asset in assets)
+                        {
+                            var strippedFileName = Path.GetFileNameWithoutExtension(asset["name"].ToString());
+                            if (strippedFileName == strippedFileQuery)
+                            {
+                                targetAsset = asset;
+                                break;
+                            }
+                        }
+                        if (targetAsset == null)
+                            targetAsset = assets[0];
+                    }
+                    else
+                    {
+                        targetAsset = assets[0];
+                    }
+                }
+                var transferResponse = await TransferAttachment(s3Event.Bucket.Name, s3Event.Object.Key, targetAsset);
 
                 if (transferResponse.IsSuccessStatusCode)
                 {
